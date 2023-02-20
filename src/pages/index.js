@@ -14,7 +14,7 @@ export default function Home() {
   const [filmName, setFilmName] = useState([])
 
 const getImages = async () => {
-axios.get(`https://www.googleapis.com/customsearch/v1?key=AIzaSyDxjct7m3ELLu-_tAqZxpaZMaAqRPcY2N8&cx=017576662512468239146:omuauf_lfve&q=lectures&searchType=image`)
+
 .then((response) => {
   console.log(response.data)
 })
