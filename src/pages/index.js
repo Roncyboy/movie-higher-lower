@@ -104,7 +104,7 @@ return (
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/faviconHL.svg" />
       </Head>
-      <main className={styles.main}>
+      <main className="main">
         <div className='title'>
         <p className='higherTitle'>
           Higher
@@ -119,7 +119,7 @@ return (
         <>
           {lost && <div className='gameOver'><h2 >Game Over you got {score} correct</h2><button onClick={GameReset}>Play Again</button></div> || <h2 className='score'>Score: {score}</h2>}
         </>
-        <div className={styles.grid}>
+        <div className="grid">
           <div className='Movies' id='firstMovie'>
           {firstMovie && (
           <>
@@ -138,7 +138,7 @@ return (
           </>)}
           </div>
 
-          <div className='Flex' >
+          <div className='Flex' id='VS' >
             <h2>VS</h2>
           </div>
           
@@ -161,7 +161,6 @@ return (
             </CountUp>}
                 {secondMovie && !lost && <button className='higherButton' onClick={handleHigher}>Higher /\</button>}
                 {secondMovie && !lost && <button className='lowerButton' onClick={handleLower}>Lower \/</button>}
-                {secondMovie && lost && <button onClick={GameReset}>Play Again</button>}
                 # of times 
               </div>
           </>)}
