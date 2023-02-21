@@ -11,13 +11,11 @@ test.afterAll(async () => {
     console.log('After tests');
 });
 
-test.describe('Home Page', () => {
-    test('Header area', async ({ page }) => {
+test.describe('Home Page Head', () => {
+    test('Head', async ({ page }) => {
         await page.goto(urlHome);
-    });
-    
-    test('Game area', async ({ page }) => {
-        await page.goto(urlHome);
+        expect(await page.title()).toBe('Higher Lower on Times a Movie says Fuck');
+        const metaDescription = page.locator('meta[name="description"]');
+        await expect(metaDescription).toHaveAttribute('content', 'Higher Lower on movies that say fuck ranking')
     });
 });
-
